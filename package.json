@@ -1,4 +1,5 @@
 {
+  "homepage": "https://akshay-99h.github.io/chat-forum/",
   "name": "chat",
   "version": "0.1.0",
   "private": true,
@@ -17,9 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
